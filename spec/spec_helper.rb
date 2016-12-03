@@ -4,7 +4,7 @@ require 'rspec/mocks/standalone'
 
 include SpecInfra::Helper::Exec
 
-PROJECT_ROOT = (Pathname.new(File.dirname(__FILE__)) + '..').expand_path
+PROJECT_ROOT = (Pathname.new(__dir__) + '..').expand_path
 
 Dir[PROJECT_ROOT.join("spec/support/**/*.rb")].each { |file| require(file) }
 
